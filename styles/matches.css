@@ -1,0 +1,172 @@
+/* =========================================
+   ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ 
+========================================= */
+
+/* Ρυθμίσεις για τους τίτλους (1η Αγωνιστική κλπ) */
+.matches-page h3 {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+
+    color:  #00458e;
+    border-bottom: 2px solid #00458e; 
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Η κάρτα ολόκληρου του αγώνα */
+.matches-page .match-card {
+    width: 750px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 30px; 
+
+    background-color: white;     
+    border: 1px solid #d3d3d3;  
+    border-radius: 10px;          
+    table-layout: fixed; 
+    border-collapse: collapse;
+}
+
+.matches-page .match-card td {
+    padding: 15px 10px;
+    vertical-align: middle; 
+}
+
+/* 1. Κελί Λογότυπων */
+.matches-page .logo-cell { 
+    text-align: center; 
+    width: 15%;
+ }
+
+.matches-page .logo-cell img { 
+    width: 70px; 
+    height: 70px; 
+    object-fit: contain;
+ }
+
+/* 2. & 3. Κελιά Ονομάτων */
+.matches-page .home-name { 
+    text-align: right; 
+    width: 25%; 
+    font-weight: 600; 
+    font-size: 1.1rem; 
+    color: #333; 
+}
+
+.matches-page .away-name {
+     text-align: left; 
+     width: 25%; 
+     font-weight: 600; 
+     font-size: 1.1rem; 
+     color: #333; 
+}
+
+/* 4. Κελί Σκορ/Κουμπιού */
+.matches-page .score-cell {
+     text-align: center; 
+     width: 20%;
+}
+
+.matches-page .score-cell h1 { 
+    margin: 0; 
+    font-size: 2.2rem; 
+    color: #00458e; 
+    letter-spacing: 3px; 
+}
+
+.matches-page .score-cell button { 
+    background-color: #00458e; 
+    color: white; border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 0.9rem; 
+    transition: 0.3s ease; 
+}
+
+.matches-page .score-cell button:hover { 
+    background-color: #e30613; 
+}
+
+/* 5. Ανάλυση σετ */
+.matches-page .match-details { 
+    background-color: #f8f9fa; 
+    text-align: center; 
+    color: #555; 
+    font-size: 0.95rem; 
+    border-top: 1px solid #eaeaea; 
+}
+
+.matches-page .match-details p { 
+    margin: 5px 0; 
+}
+
+/* RESPONSIVE — TABLET (≤1024px) */
+@media (max-width: 1024px) {
+
+    .matches-page .match-card,
+    .matches-page h3 {
+        width: 90%;
+    }
+}
+
+
+/* RESPONSIVE — MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    .matches-page .match-card,
+    .matches-page h3 {
+        width: 100%;
+    }
+
+    /* ο πίνακας χρησιμοποιεί όλο τον διαθέσιμο χώρο */
+    .matches-page .match-card {
+        table-layout: fixed;
+    }
+
+    /* Λιγότερο χώρο τα logo */
+    .matches-page .logo-cell {
+        width: 12%;
+        text-align: center;
+    }
+
+    .matches-page .logo-cell img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Σκορ στο κέντρο */
+    .matches-page .score-cell {
+        width: 20%;
+        text-align: center;
+    }
+
+    .matches-page .score-cell h1 {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
+
+    .matches-page .score-cell button {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+
+    /* τα ονόματα μένουν εμφανίσιμα */
+    .matches-page .home-name,
+    .matches-page .away-name {
+        font-size: 0.7rem;
+        width: 28%;
+    }
+
+    .matches-page .match-card td {
+        padding: 8px 3px;
+    }
+
+    .matches-page .match-details {
+        font-size: 0.75rem;
+    }
+}

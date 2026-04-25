@@ -1,0 +1,63 @@
+main {
+    max-width: 1000px;
+    margin: 40px auto; /* Κεντράρει το main και αφήνει κενό πάνω-κάτω */
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Ελαφριά σκιά για βάθος */
+    text-align: center; /* Όλο το κείμενο κεντραρισμένο */
+}
+
+main h2 {
+    color: #00458e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+
+    border-left: none; 
+    padding-left: 0;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* Κεντράρει τις παραγράφους */
+}
+
+/* ΦΩΤΟΓΡΑΦΙΕΣ ΔΙΠΛΑ-ΔΙΠΛΑ (Gallery) */
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.image-gallery figure {
+    margin: 0;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*RESPONSIVE — MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    .image-gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-gallery figure {
+        width: 100%;
+        padding: 0;
+    }
+
+    .image-gallery img {
+        width: 100%;
+    }
+}

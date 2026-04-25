@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Είσοδος</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <img src="../media/volley_league.jpg" alt="Logo volley league">
+        <h1>VOLLEY LEAGUE ΑΝΔΡΩΝ</h1>
+       </div> 
+    </header>
+
+    <nav>
+            <ul>
+                <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                <li><a href="clubs.html">ΠΡΟΦΙΛ ΟΜΑΔΩΝ</a></li>
+                <li><a href="matches.html">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</a></li>
+                <li><a href="table.html">ΒΑΘΜΟΛΟΓΙΑ</a></li>
+                <li><a href="add_result.html">ΠΡΟΣΘΗΚΗ ΑΠΟΤΕΛΕΣΜΑΤΟΣ</a></li>
+                <li><a href="add_club.html">ΠΡΟΣΘΗΚΗ ΟΜΑΔΑΣ</a></li>
+                <li><a href="sign-up.html">ΕΓΓΡΑΦΗ</a></li>
+                <li><a href="login.html">ΕΙΣΟΔΟΣ</a></li>
+            </ul>
+    </nav>
+
+    <main class="auth-page">
+        <section>
+            <h2>Είσοδος</h2>    <!--Είσοδος , φόρμα στοιχείων εγγραφής-->
+
+            <form name="add_club" method="post" action="#">
+                <fieldset>
+                    <legend>Στοίχεια</legend>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+
+                <button type="submit">Είσοδος</button>
+                <br>
+                </fieldset>
+            </form>
+            <br>
+        </section>
+    </main>
+
+    <footer>Πρωτάθλημα Βόλεϊ 2026 &copy;</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγραφή</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <img src="../media/volley_league.jpg" alt="Logo volley league">
+        <h1>VOLLEY LEAGUE ΑΝΔΡΩΝ</h1>
+       </div> 
+    </header>
+
+    <nav>
+            <ul>
+                <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                <li><a href="clubs.html">ΠΡΟΦΙΛ ΟΜΑΔΩΝ</a></li>
+                <li><a href="matches.html">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</a></li>
+                <li><a href="table.html">ΒΑΘΜΟΛΟΓΙΑ</a></li>
+                <li><a href="add_result.html">ΠΡΟΣΘΗΚΗ ΑΠΟΤΕΛΕΣΜΑΤΟΣ</a></li>
+                <li><a href="add_club.html">ΠΡΟΣΘΗΚΗ ΟΜΑΔΑΣ</a></li>
+                <li><a href="sign-up.html">ΕΓΓΡΑΦΗ</a></li>
+                <li><a href="login.html">ΕΙΣΟΔΟΣ</a></li>
+            </ul>
+    </nav>
+
+    <main class="auth-page">
+        <section>
+            <h2>Εγγραφή</h2>
+
+            <form name="add_club" method="post" action="#">
+                <fieldset>
+                    <legend>Στοιχεία Εγγραφόμενου</legend>   <!--Στοιχεία εγγραφόμενου-->
+
+                <label for="first_name">Όνομα:</label><br>
+                <input type="text" id="first_name" name="first_name" required>
+                <br><br>
+
+                <label for="last_name">Επίθετο:</label><br>
+                <input type="text" id="last_name" name="last_name" required>
+                <br><br>
+
+                <label for="role">Ρόλος:</label><br>
+                <select name="role" required>
+                     <option value="role">Διαχειριστής Ομάδας</option>
+                     <option value="role">Διαιτητής</option>
+                </select>
+                <br><br>
+
+                <label for="call">Τηλέφωνο:</label><br>
+                <input type="tel" id="call" name="call" required placeholder="6999999999">
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="email@somewhere.com">
+                <br><br>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+
+                <label for="password_2">Επιβεβαίωση Password:</label><br>
+                <input type="password" id="password_2" name="password_2" required>
+                <br><br>
+
+                <button type="submit">Εγγραφή</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>Πρωτάθλημα Βόλεϊ 2026 &copy;</footer>
+</body>
+</html>

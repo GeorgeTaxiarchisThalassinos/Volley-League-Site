@@ -1,0 +1,184 @@
+/*box sizing για την ενσωμάτωση τησ διάστασεις των στοιχείων στην οθόνη */
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9; 
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-left: 30px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    border-left: 5px solid #e30613;
+    padding-left: 4px;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #00458e; 
+    color: white;
+    padding: 15px 0;
+    border-bottom: 4px solid #e30613; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.header-container img {
+    height: 70px; 
+    border-radius: 5px;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background-color: #003366; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #e30613; 
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE — 1st BREAKPOINT: TABLET (≤1024px) */
+@media (max-width: 1024px) {
+
+    .header-container h1 { font-size: 1.6rem; }
+
+    nav li a {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+
+    .col-m-1  { width: 8.33%; }
+    .col-m-2  { width: 16.66%; }
+    .col-m-3  { width: 25%; }
+    .col-m-4  { width: 33.33%; }
+    .col-m-5  { width: 41.66%; }
+    .col-m-6  { width: 50%; }
+    .col-m-7  { width: 58.33%; }
+    .col-m-8  { width: 66.66%; }
+    .col-m-9  { width: 75%; }
+    .col-m-10 { width: 83.33%; }
+    .col-m-11 { width: 91.66%; }
+    .col-m-12 { width: 100%; }
+
+    .matches-page .match-card,
+    .matches-page h3 { width: 90%; }
+
+    .table-page table { width: 90%; }
+}
+
+
+/* RESPONSIVE — 2nd BREAKPOINT: MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-container h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .header-container img { height: 55px; }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #00458e;
+    }
+
+    nav li a {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+    }
+
+    [class*="col-"] { width: 100%; }
+
+    .matches-page .match-card,
+    .matches-page h3 { width: 100%; }
+
+    .matches-page .home-name,
+    .matches-page .away-name { font-size: 0.85rem; }
+
+    .matches-page .score-cell h1 { font-size: 1.4rem; }
+
+    .matches-page .logo-cell img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .table-page table { width: 100%; font-size: 0.78rem; }
+
+    .table-page th,
+    .table-page td { padding: 6px 4px; }
+
+    .add-club-page label,
+    .add-result-page label {
+        width: 100%;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .add-club-page input[type="text"],
+    .add-club-page input[type="url"] { width: 100%; }
+
+    .add-result-page input[type="number"] {
+        width: 55px;
+        margin-right: 8px;
+    }
+
+    .auth-page form { margin-bottom: 40px; }
+}

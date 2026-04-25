@@ -1,0 +1,266 @@
+/* 1. Κεντράρισμα και Μέγεθος Φόρμας */
+.add-club-page form {
+    width: 100%;
+    max-width: 900px; /* Λίγο πιο φαρδιά γιατί έχει τον πίνακα μέσα */
+    margin: 0 auto 60px auto; 
+}
+
+/* 2. Το Πλαίσιο της Φόρμας */
+.add-club-page fieldset {
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.add-club-page legend {
+    background-color: #00458e;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 3. Στοίχιση των Labels (Ετικέτες πεδίων) */
+.add-club-page label {
+    display: inline-block;
+    font-weight: 600;
+    color: #333;
+    width: 180px; /* Αρκετός χώρος για κείμενα όπως "Λογότυπο Ομάδας:" */
+    margin-bottom: 10px;
+}
+
+/* 4. Στυλ για τα Input πεδία (εκτός πίνακα) */
+.add-club-page input[type="text"],
+.add-club-page input[type="url"] {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* 5. ΠΙΝΑΚΑΣ ΠΑΙΚΤΩΝ (Ρόστερ) */
+.add-club-page h3 {
+    color: #00458e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 5px;
+}
+
+.add-club-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.add-club-page th {
+    background-color: #f8f9fa; 
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+}
+
+.add-club-page td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 6. Input πεδία μέσα στον πίνακα (να πιάνουν όλο το κελί) */
+.add-club-page td input,
+.add-club-page td select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: inherit;
+}
+
+
+.add-club-page td select {
+    padding-right: 30px; 
+    cursor: pointer;     /* Όταν πάει το ποντίκι πάνω, γίνεται "χεράκι" για να δείξει ότι πατιέται */
+    min-width: 120px;
+}
+
+/* Ειδικό πλάτος για τα μικρά νούμερα στον πίνακα */
+.add-club-page td input[name="jersey_no"] {
+    width: 60px;
+    text-align: center;
+}
+
+.add-club-page td input[name="height"] {
+    width: 80px;
+}
+
+/* 7. Μικρές λεπτομέρειες για το "ή" στα βίντεο */
+.add-club-page p {
+    display: inline-block;
+    font-weight: bold;
+    color: #555;
+    margin: 0 15px;
+}
+
+/* 8. Το Κουμπί Υποβολής */
+.add-club-page button {
+    background-color: #00458e;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block; 
+    margin: 30px auto 0 auto;
+    transition: 0.3s ease;
+}
+
+.add-club-page button:hover {
+    background-color: #e30613; 
+} 
+
+/* RESPONSIVE — TABLET (≤1024px)*/
+@media (max-width: 1024px) {
+
+     /* Η φόρμα παίρνει περισσότερο χώρο */
+    .add-club-page form { max-width: 95%; }
+
+    /* Τα labels μικραίνουν λίγο */
+    .add-club-page label { width: 140px; }
+
+    /* Ακυρώνουμε τη συμπεριφορά του πίνακα */
+    .add-club-page table, 
+    .add-club-page thead, 
+    .add-club-page tbody, 
+    .add-club-page th, 
+    .add-club-page td, 
+    .add-club-page tr { 
+        display: block; 
+        width: 100%; 
+    }
+
+    /* Κρύβουμε τις επικεφαλίδες */
+    .add-club-page thead tr { 
+        display: none; 
+    }
+
+    /* Κάθε παίκτης γίνεται κάρτα */
+    .add-club-page tr { 
+        border: 2px solid #00458e;
+        border-radius: 8px;
+        margin-bottom: 25px; 
+        padding: 15px;
+        background-color: #fcfcfc;
+    }
+
+    /* Τα κελιά χωρίς borders */
+    .add-club-page td { 
+        border: none;
+        padding: 8px 0;
+        position: relative;
+    }
+
+    /* Όλα τα inputs πιάνουν 100% */
+    .add-club-page td input,
+    .add-club-page td select {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Αυτόματοι τίτλοι πάνω από κάθε κουτάκι */
+    .add-club-page td:nth-child(1)::before { content: "Αριθμός Φανέλας:"; }
+    .add-club-page td:nth-child(2)::before { content: "Ονοματεπώνυμο:"; }
+    .add-club-page td:nth-child(3)::before { content: "Θέση:"; }
+    .add-club-page td:nth-child(4)::before { content: "Ύψος:"; }
+    .add-club-page td:nth-child(5)::before { content: "Ημερομηνία Γέννησης:"; }
+
+    .add-club-page td::before {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+/*  RESPONSIVE — MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    .add-club-page form { max-width: 100%; }
+    .add-club-page fieldset { padding: 15px; }
+
+    .add-club-page .form-fields label,
+    .add-club-page label {
+        width: 100%;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .add-club-page input[type="text"],
+    .add-club-page input[type="url"],
+    .add-club-page input[type="file"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ΜΕΤΑΤΡΟΠΗ ΠΙΝΑΚΑ ΣΕ ΚΑΡΤΕΣ --- */
+    
+    /* 1. Ακυρώνουμε τη συμπεριφορά του πίνακα */
+    .add-club-page table, 
+    .add-club-page thead, 
+    .add-club-page tbody, 
+    .add-club-page th, 
+    .add-club-page td, 
+    .add-club-page tr { 
+        display: block; 
+        width: 100%; 
+    }
+    
+    /* 2. Κρύβουμε τις επικεφαλίδες γιατί πλέον δεν στοιχίζονται */
+    .add-club-page thead tr { 
+        display: none; 
+    }
+    
+    /* 3. Η κάθε γραμμή (κάθε παίκτης) γίνεται πλέον μια "κάρτα" */
+    .add-club-page tr { 
+        border: 2px solid #00458e; /* Μπλε περίγραμμα για να ξεχωρίζει ο κάθε παίκτης */
+        border-radius: 8px;
+        margin-bottom: 25px; 
+        padding: 15px;
+        background-color: #fcfcfc;
+    }
+    
+    /* 4. Τα κελιά δεν χρειάζονται πια borders */
+    .add-club-page td { 
+        border: none;
+        padding: 8px 0;
+        position: relative;
+    }
+    
+    /* 5. Όλα τα input/select μέσα στον πίνακα πιάνουν το 100% του χώρου */
+    .add-club-page td input,
+    .add-club-page td select {
+        width: 100% !important; /* Το !important "νικάει" τα 60px που είχαμε βάλει παλιά για τη φανέλα */
+        box-sizing: border-box;
+    }
+
+    /* 6. Προσθέτουμε αυτόματα "Τίτλους" πάνω από κάθε κουτάκι για να ξέρει ο χρήστης τι γράφει */
+    .add-club-page td:nth-child(1)::before { content: "Αριθμός Φανέλας:"; }
+    .add-club-page td:nth-child(2)::before { content: "Ονοματεπώνυμο:"; }
+    .add-club-page td:nth-child(3)::before { content: "Θέση:"; }
+    .add-club-page td:nth-child(4)::before { content: "Ύψος:"; }
+    .add-club-page td:nth-child(5)::before { content: "Ημερομηνία Γέννησης:"; }
+
+    .add-club-page td::before {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+} 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/add_result.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσθήκη Αποτελέσματος</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <img src="../media/volley_league.jpg" alt="Logo volley league">
+        <h1>VOLLEY LEAGUE ΑΝΔΡΩΝ</h1>
+       </div> 
+    </header>
+
+    <nav>
+            <ul>
+                <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                <li><a href="clubs.html">ΠΡΟΦΙΛ ΟΜΑΔΩΝ</a></li>
+                <li><a href="matches.html">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</a></li>
+                <li><a href="table.html">ΒΑΘΜΟΛΟΓΙΑ</a></li>
+                <li><a href="add_result.html">ΠΡΟΣΘΗΚΗ ΑΠΟΤΕΛΕΣΜΑΤΟΣ</a></li>
+                <li><a href="add_club.html">ΠΡΟΣΘΗΚΗ ΟΜΑΔΑΣ</a></li>
+                <li><a href="sign-up.html">ΕΓΓΡΑΦΗ</a></li>
+                <li><a href="login.html">ΕΙΣΟΔΟΣ</a></li>
+            </ul>
+    </nav>
+
+    <main class="add-result-page">
+      <section>
+
+        <h2>Προσθήκη Αποτελέσματος</h2>
+
+        <form name="add_result" method="post" action="#">
+            <fieldset>
+                <legend>Σετ Αγώνα</legend>           <!-- Στοιχεία παιχνιδιού ανά σετ-->
+
+            <label for="set_1">Set 1-Home:</label>
+            <input type="number" id="set_1" name="set_1">
+
+            <label for="away_1">Away:</label>
+             <input type="number" id="away_1" name="away_1">
+             <br>
+             <br>
+
+             <label for="set_2">Set 2-Home:</label>
+            <input type="number" id="set_2" name="set_2">
+
+            <label for="away_2">Away:</label>
+             <input type="number" id="away_2" name="away_2">
+             <br>
+             <br>
+
+             <label for="set_3">Set 3-Home:</label>
+            <input type="number" id="set_3" name="set_3">
+
+            <label for="away_3">Away:</label>
+             <input type="number" id="away_3" name="away_3">
+             <br>
+             <br>
+
+             <label for="set_4">Set 4-Home:</label>
+            <input type="number" id="set_4" name="set_4">
+
+            <label for="away_4">Away:</label>
+             <input type="number" id="away_4" name="away_4">
+             <br>
+             <br>
+
+             <label for="set_5">Set 5-Home:</label>
+            <input type="number" id="set_5" name="set_5">
+
+             <label for="away_5">Away:</label>
+             <input type="number" id="away_5" name="away_5">
+             <br>
+             <br>
+
+             <label for="fyllo_agona">Φύλλο Αγώνα:</label>
+             <input type="file" id="fyllo_agona" name="fyllo_agona">
+              <br>
+              <br>
+
+            <button type="submit">Υποβολή</button>
+            </fieldset>
+              
+        </form>
+      </section>
+    </main>
+
+    <footer>Πρωτάθλημα Βόλεϊ 2026 &copy;</footer>
+</body>
+</html>

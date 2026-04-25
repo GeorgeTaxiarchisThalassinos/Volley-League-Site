@@ -1,0 +1,186 @@
+/* 1. Η Κάρτα της κάθε ομάδας */
+.clubs-page article {
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* 2. Η Κεφαλίδα (Λογότυπο + Όνομα μαζί) */
+.clubs-page .team-header {
+    display: flex;
+    align-items: center; /* Ευθυγραμμίζει το logo με το κείμενο κάθετα */
+    justify-content: center; /* Τα βάζει ακριβώς στο κέντρο */
+    gap: 15px; /* Το κενό ανάμεσα στο logo και το όνομα */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e30613; /* Κόκκινη υπογράμμιση */
+    padding-bottom: 15px;
+}
+
+.clubs-page .team-header img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.clubs-page .team-header h2 {
+    margin: 0;
+    color: #00458e;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    border-left: none; 
+    padding-left: 0;
+} 
+
+/* 3. Η Ομαδική Φωτογραφία και η Λεζάντα (Caption) */
+.clubs-page figure {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.clubs-page figure img {
+    width: 100%; /* Απλώνεται όμορφα μέσα στην κάρτα */
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.clubs-page figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 4. Οι Τίτλοι των Ενοτήτων (Παίκτες, Προσωπικό κλπ) */
+.clubs-page h3 {
+    color: #00458e;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* 5. Ο Πίνακας του Ρόστερ (Ίδιο όμορφο στυλ με τα προηγούμενα) */
+.clubs-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.clubs-page thead {
+    background-color: #00458e;
+    color: white;
+}
+
+.clubs-page th, .clubs-page td {
+    padding: 12px 10px;
+    text-align: center; /* Όλα στο κέντρο για συμμετρία */
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* Το όνομα του παίκτη (2η στήλη) να είναι αριστερά */
+.clubs-page th:nth-child(2),
+.clubs-page td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Ζέβρα εφέ για τον πίνακα */
+.clubs-page tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* 6. Το Προσωπικό (Λίστα) */
+.clubs-page ul {
+    list-style-type: square;
+    color: #333;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+/* 7. Το Βίντεο της Ομάδας */
+.clubs-page video {
+    display: block;
+    margin: 0 auto 20px auto; /* Κεντράρει το βίντεο */
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #000; /* Μαύρο φόντο αν το βίντεο αργεί να φορτώσει */
+}
+
+/* 8. Το Link για το Site της Ομάδας (Μοιάζει με κουμπί!) */
+.clubs-page a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #00458e;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.clubs-page a:hover {
+    background-color: #e30613;
+}
+
+/* RESPONSIVE — TABLET (≤1024px)*/
+@media (max-width: 1024px) {
+
+    /* Οι ομάδες έχουν 2 cols αλλά με λιγότερο padding */
+    .clubs-page article {
+        padding: 25px;
+    }
+
+    .clubs-page th,
+    .clubs-page td {
+        padding: 8px 6px;
+        font-size: 0.9rem;
+    }
+
+    .clubs-page video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*  RESPONSIVE — MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    /* κάθε ομάδα παίρνει full width και παραμένει η μία ομάδα κάτω από την άλλη */
+    .clubs-page article {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .clubs-page .team-header h2 {
+        font-size: 1.4rem;
+    }
+
+    /* ο πίνακας πηγαίνει οριζόντια*/
+    .clubs-page section {
+        overflow-x: auto;
+    }
+
+    .clubs-page table {
+        min-width: 450px;
+    }
+
+    .clubs-page th,
+    .clubs-page td {
+        padding: 6px 5px;
+        font-size: 0.82rem;
+    }
+
+    /* Το βίντεο παίρνει το full width */
+    .clubs-page video {
+        width: 100%;
+        height: auto;
+    }
+}

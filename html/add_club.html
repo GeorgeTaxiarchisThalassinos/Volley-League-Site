@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/add_club.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσθήκη Ομάδας</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <img src="../media/volley_league.jpg" alt="Logo volley league">
+        <h1>VOLLEY LEAGUE ΑΝΔΡΩΝ</h1>
+       </div> 
+    </header>
+
+    <nav>
+            <ul>
+                <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                <li><a href="clubs.html">ΠΡΟΦΙΛ ΟΜΑΔΩΝ</a></li>
+                <li><a href="matches.html">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</a></li>
+                <li><a href="table.html">ΒΑΘΜΟΛΟΓΙΑ</a></li>
+                <li><a href="add_result.html">ΠΡΟΣΘΗΚΗ ΑΠΟΤΕΛΕΣΜΑΤΟΣ</a></li>
+                <li><a href="add_club.html">ΠΡΟΣΘΗΚΗ ΟΜΑΔΑΣ</a></li>
+                <li><a href="sign-up.html">ΕΓΓΡΑΦΗ</a></li>
+                <li><a href="login.html">ΕΙΣΟΔΟΣ</a></li>
+            </ul>
+    </nav>
+
+    <main class="add-club-page">
+        <section>
+            <h2>Προσθήκη Ομάδας</h2>
+
+            <form name="add_club" method="post" action="#">
+            <fieldset>
+                <legend>Στοιχεία Συλλόγου</legend>  <!--Στοιχεία Συλλόγου για εισαγωγή-->
+             <div class="form-fields">
+                <label for="club_name">Όνομα Ομάδας:</label>
+                <input type="text" id="club_name" name="club_name" required placeholder="π.χ. Α.Ο.Φοίνικας">
+                <br><br>
+
+                <label for="logo">Λογότυπο Ομάδας:</label>
+                <input type="file" id="logo" name="logo" required>
+                <br><br>
+
+                <label for="photo">Φωτογραφία Ομάδας:</label>
+                <input type="file" id="photo" name="photo" required>
+                <br><br>
+            </div>
+                <section>
+                    <h3>Στοιχεία Παικτών</h3>  <!-- Πίνακας για εισαγωγή των στοιχείων των παικτών-->
+                    
+                    <table border="1" id="players-table">
+                        <thead>
+                            <tr>
+                                <th>Αριθμός Φανέλας</th>
+                                <th>Ονοματεπώνυμο</th>
+                                <th>Θέση</th>
+                                <th>Ύψος (m)</th>
+                                <th>Ημερομηνία Γέννησης</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="jersey_no" min="0" max="99" required></td>
+                                <td><input type="text" name="player_name" required></td>
+                                <td>
+                                    <select name="position" required>
+                                        <option value="setter">Πασαδόρος</option>
+                                        <option value="outside_hitter">Ακραίος</option>
+                                        <option value="middle_blocker">Κεντρικός</option>
+                                        <option value="opposite">Διαγώνιος</option>
+                                        <option value="libero">Λίμπερο</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" name="height" step="0.01" min="1.00" max="2.50" required></td>
+                                <td><input type="date" name="birth" required></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </section>
+            
+                <br>
+             <div class="form-fields">
+                <label for="coach">Προπονητής Ομάδας:</label>           <!--Στοιχεία Συλλόγου για εισαγωγή-->
+                <input type="text" id="coach" name="coach" required>
+                <br><br>
+
+                <label for="video">Video Ομάδας:</label>
+                
+                <input type="file" id="video" name="video" required>   <p>ή</p>
+                <input type="url" id="url_omadas" name="url_omadas" placeholder="https://www.example.com" required>
+                <br><br>
+
+                <label for="site">Site Ομάδας:</label>
+                <input type="url" id="site" name="site" placeholder="https://www.example.com" required>
+                <br><br>
+            </div>
+                <hr>
+
+                <button type="submit">Προσθήκη Ομάδας</button>
+            </fieldset>
+        </section>
+    </main>
+    <footer>Πρωτάθλημα Βόλεϊ 2026 &copy;</footer>
+</body>
+</html>

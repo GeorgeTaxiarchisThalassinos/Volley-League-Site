@@ -1,0 +1,95 @@
+/* 1. Το "Κουτί" του Πίνακα */
+
+.table-page table {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; 
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-bottom: 40px;
+}
+
+/* 2. Η Μπλε Κεφαλίδα */
+.table-page thead {
+    background-color: #00458e;
+    color: white;
+}
+
+.table-page th {
+    padding: 15px 10px;
+    font-weight: 600;
+    text-align: center; 
+    border-bottom: 4px solid #e30613; 
+}
+
+/* 3. Τα απλά κελιά (Νούμερα, Σετ, Ήττες κλπ) */
+.table-page td {
+    padding: 12px 10px;
+    text-align: center; 
+    border-bottom: 1px solid #eaeaea; 
+    vertical-align: middle;
+    color: #333;
+}
+
+/* 4. Κλάση: Ονόματα Ομάδων (Στοίχιση αριστερά) */
+.table-page .team-name {
+    text-align: left;
+    font-weight: 600; 
+}
+
+/* Ρύθμιση για το λογότυπο μέσα στο όνομα της ομάδας */
+.table-page .team-name img {
+    vertical-align: middle;
+    margin-right: 12px;
+    width: 30px; 
+    height: 30px;
+    object-fit: contain;
+}
+
+/* 5. Κλάση: Βαθμοί (Πιο μεγάλα γράμματα και μπλε χρώμα) */
+.table-page .team-points {
+    font-weight: bold;
+    font-size: 1.15rem;
+    color: #00458e;
+}
+
+.table-page tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover Εφέ: Απαλό γαλάζιο όταν περνάει το ποντίκι */
+.table-page tbody tr:hover {
+    background-color: #f0f5fa;
+    transition: background-color 0.2s ease;
+}
+
+/* RESPONSIVE — TABLET (≤1024px) */
+@media (max-width: 1024px) {
+
+    .table-page table {
+        width: 95%;
+    }
+}
+
+
+/*RESPONSIVE — MOBILE (≤768px)*/
+@media (max-width: 768px) {
+
+    .table-page table {
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    .table-page th,
+    .table-page td {
+        padding: 6px 3px;
+    }
+
+    /* Κρύβει το logo */
+    .table-page .team-name img {
+        display: none;
+    }
+}

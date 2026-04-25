@@ -1,0 +1,90 @@
+/* 1. Κεντράρισμα και Μέγεθος Φόρμας */
+.auth-page form {
+    width: 100%;
+    max-width: 450px; /* Ιδανικό μέγεθος, ούτε πολύ στενό ούτε πολύ φαρδύ */
+    margin: 0 auto 80px auto; 
+}
+
+/* 2. Το Πλαίσιο (Κάρτα Φόρμας) */
+.auth-page fieldset {
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.auth-page legend {
+    background-color: #00458e;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 3. Τα Κείμενα (Labels) */
+.auth-page label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* 4. Στυλ για ΟΛΑ τα Input πεδία και το Select */
+.auth-page input[type="text"],
+.auth-page input[type="password"],
+.auth-page input[type="email"],
+.auth-page input[type="tel"],
+.auth-page select {
+    width: 100%; /* Πιάνουν όλο το χώρο από αριστερά μέχρι δεξιά */
+    padding: 10px;
+    margin-top: 5px; /* Μικρή απόσταση από το όνομά τους (label) */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    box-sizing: border-box; /* Εξασφαλίζει ότι δεν θα βγουν έξω από το λευκό πλαίσιο */
+    font-size: 1rem;
+}
+
+/* 5. Το βελάκι στο Select (Ρόλος) */
+.auth-page select {
+    cursor: pointer;
+}
+
+/* 6. Το Κουμπί Υποβολής */
+.auth-page button {
+    width: 100%; /* Ένα μεγάλο, εντυπωσιακό κουμπί σε όλο το πλάτος! */
+    background-color: #00458e;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.auth-page button:hover {
+    background-color: #e30613; 
+}
+
+/* RESPONSIVE — TABLET (≤1024px) */
+@media (max-width: 1024px) {
+
+    .auth-page form {
+        max-width: 80%;
+    }
+}
+
+/* RESPONSIVE — MOBILE (≤768px)*/
+@media (max-width: 768px) {
+
+    .auth-page form {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .auth-page fieldset {
+        padding: 20px;
+    }
+}
